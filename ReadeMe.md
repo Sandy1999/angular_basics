@@ -1,1 +1,0 @@
-This is a basic git repo to start with a basics in angualar and typescript using forms and routing along with a services
