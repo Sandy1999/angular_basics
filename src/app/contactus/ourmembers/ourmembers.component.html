@@ -1,0 +1,8 @@
+<h1>{{title}}</h1>
+<div *ngIf = "users">
+  <p>List of our Team Members</p>
+  <p *ngFor = "let user of users"> <a [routerLink]="['/ourmembers',user.name]">Name:{{user.name}}</a>, email: {{user.email}}</p>
+</div>
+<div *ngIf="name">
+  <h1>{{name}}</h1> 
+</div>

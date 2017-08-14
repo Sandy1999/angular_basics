@@ -1,0 +1,14 @@
+<h1>Invoices</h1>  
+  <form [formGroup]="invoiceform" (ngSubmit)="invoiceSubmit()">
+      <div formArray="price" *ngFor="let price of prices.controls; index as i" >
+        <label for="Price">Price:</label><input type="text" [formControlName]="i" [(ngModel)] = "product.number1">
+      </div>
+      <div formArray="quantity" *ngFor="let quantity of quantities.controls ; index as i" >
+        <label for="">Quantity</label><input type="text" [formControlName]="i" [(ngModel)] = "product.number2">
+      </div>
+      <div formArray="total" *ngFor="let total of totalamount.controls ; index as i" >
+        <label for="">Total</label><input type="text" [formControlName]="i" ngModel="{{product.number1*product.number2}}">
+      </div>
+      <button>Submit</button>  
+    </form>
+    <button (click)="addItem()">Add item</button>

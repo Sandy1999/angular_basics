@@ -1,0 +1,15 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div  class="invoice" formArrayName="cities" *ngFor="let city of cities.controls; index as i">
+      <input [formControlName]="i" placeholder="City" [(ngModel)]="product.price">
+    </div>
+      <div class="invoice" formArrayName = "state" *ngFor="let state of states.controls; index as i">
+        <input [formControlName]="i" type="text" placeholder="State" [(ngModel)]="product.quantity"> 
+      </div>
+      <div class="invoice" formArrayName = "total" *ngFor="let total of totals.controls; index as i">
+        <input type="text" [formControlName]="i" placeholder="total" ngModel="{{product.price*product.quantity}}">
+      </div>
+  <button>Submit</button>
+</form>
+
+<button (click)="addCity()">Add City</button>
+<!-- <button (click)="setPreset()">Set preset</button> -->

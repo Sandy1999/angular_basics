@@ -1,0 +1,15 @@
+<body>
+<div style="text-align:center">
+  <h1>
+     {{title}}
+  </h1>
+    <h3>{{name}}</h3>
+</div>
+<h1>Router Links</h1>
+ <a [routerLink]="['/']">Home</a>
+ <a [routerLink]="['/aboutus']">About Us</a> 
+ <a [routerLink]="['/contactus']">Contact Us</a>
+ <a [routerLink]="['/ourmembers']">Our Team</a>
+ <a [routerLink]="['/invoice']">Invoice</a>   
+ <router-outlet></router-outlet>
+</body>
